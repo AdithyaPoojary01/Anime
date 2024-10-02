@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.album-title {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Cursive', sans-serif;
+    background-color: #ff7e5f; /* Change this color as needed */
+    color: white; /* Set text color */
+    padding: 20px;
+    border-bottom: 4px solid #feb47b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.album-title:hover {
+    transform: scale(1.05);
+    background-color: #feb47b; /* Optional: change background on hover */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+    margin-bottom: 20px;
+}
+
+.image-row img {
+    width: 23%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.image-row img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .image-row img {
+        width: 30%; /* 3 images per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-row img {
+        width: 45%; /* 2 images per row on smaller tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .image-row img {
+        width: 100%; /* 1 image per row on mobile devices */
+    }
+    
+    .album-title {
+        font-size: 32px; /* Smaller title on mobile */
+    }
+}
